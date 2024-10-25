@@ -30,7 +30,7 @@
                 <td>{{model.edad}}</td>
                 <td>{{model.fecha_nacimiento}}</td>
                 <td><a href="/actualizar/{{model.id}}" class='btn btn-success'> actualizar</a></td>
-                <td><a href="/eliminar/{{model.id}}" class=" btn btn-danger">eliminar</a></td>
+                <td><a href="/eliminar/{{model.id}}" class=" btn btn-danger" onclick="return confirm('¿Estas seguro de que deseas eliminar esta mascota?')">eliminar</a></td>
             </tr>
             {%endfor%}
         </Tbody>

@@ -22,7 +22,8 @@ def agregar (request):
             except ValidationError as e:
                 form.add_error(None,e)
     
-    data = {'form':form}
+    data = {'form':form,'titulo': 'Agregar Mascota','boton_texto': 'Agregar Mascota'}
+
     return render ( request, 'app/agregar.html',data)
 
 def eliminar (request,id):
@@ -41,5 +42,5 @@ def actualizar (request,id):
                 return index(request)
             except ValidationError as e:
                 form.add_error(None,e)
-    data = {'form': form}
+    data = {'form': form, 'titulo': 'Editar Mascota','boton_texto': 'Guardar Cambios'}
     return render(request,'app/agregar.html',data)
